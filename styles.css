@@ -10,7 +10,7 @@ body {
 summary, details{
   color: #FEF2BF;
   font-family: 'Press Start 2P', cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: auto;
   padding: 0.5rem;
   background-color: #3F011F;
@@ -27,11 +27,11 @@ details{
 .btn, .btn:hover{
   text-decoration: none;
   border-radius: 0.5rem;
-  margin: 3rem;
+  margin: 3rem auto 3rem;
   font-family: 'Press Start 2P', cursive;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #FEF2BF;
-  padding: 0.5rem;
+  padding: 1rem;
   border: 1px solid;
   background-color: #3F011F;
 }
