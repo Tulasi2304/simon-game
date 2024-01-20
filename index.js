@@ -4,6 +4,16 @@ let userPattern = [];
 let level = 0;
 let started = false;
 
+if($(window).width() < 767){
+    $("#level-title").text("Click on the screen to start");
+    $(document).on("click", ()=>{
+        if(started === false){
+            started = true;
+            nextSequence();
+        }
+    });
+}
+
 $(document).on("keydown", ()=>{
     if(started === false){
         started = true;
