@@ -4,7 +4,7 @@ let userPattern = [];
 let level = 0;
 let started = false;
 
-if($(window).width() < 767){
+if($(window).width() < 1024){
     $("#level-title").text("Click on the screen to start");
     $(document).on("click", ()=>{
         if(started === false){
