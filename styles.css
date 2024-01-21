@@ -12,13 +12,13 @@ summary, details{
   font-family: 'Press Start 2P', cursive;
   font-size: 1.2rem;
   margin: auto;
-  padding: 0.5rem;
+  padding: 0.5rem 3rem;
   background-color: #3F011F;
 }
 
 details{
-  font-size: 0.9rem;
-  width: 50%;
+  font-size: 0.8rem;
+  width: 60%;
   height: fit-content;
   text-align: justify;
   line-height: 2;
