@@ -5,21 +5,25 @@ let level = 0;
 let started = false;
 
 if($(window).width() < 1024){
-    $("#level-title").text("Click on the screen to start");
-    $(document).on("click", ()=>{
+    $("#level-title").text("Click on the Button to start");
+    $("#level-title").after("<button class='btn'>Start Game</button>");
+    $(".btn").on("click", ()=>{
         if(started === false){
+            $(".btn").hide();
             started = true;
             nextSequence();
         }
     });
 }
 
-$(document).on("keydown", ()=>{
-    if(started === false){
-        started = true;
-        nextSequence();
-    }
-});
+else{
+    $(document).on("keydown", ()=>{
+        if(started === false){
+            started = true;
+            nextSequence();
+        }
+    });
+}
 
 $(".game-btn").on("click",function(){
     let userChosenColor = $(this).attr("id");
@@ -69,6 +73,11 @@ function checkAnswer(currentColor){
             $("body").removeClass("game-over");
         }, 200);
         $("#level-title").text("Game Over, Press Any Key to Restart");
+        if($(window).width() < 1024){
+            $("#level-title").text("Game Over, Press the Button to Restart");
+            $(".btn").show();
+            $(".btn").text("Restart Game");
+        }
     }
 }
 
